@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ミミトライブ募集します♡｜クリスタルボウル体験会</title>
+<meta name="description" content="クリスタルボウルのお仲間を募集します。経験ゼロで大丈夫。年齢も問いません。第1回・クリスタルボウル体験会は9月21日、愛知県新城市のミミ リバーハウスにて。定員5名。">
+<meta property="og:title" content="ミミトライブ募集します♡｜クリスタルボウル体験会">
+<meta property="og:description" content="経験ゼロで大丈夫。年齢も問いません。いつか100人で鳴らしたい——一緒に奏でるお仲間を募集します。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero.jpg">
+<style>
+  :root{
+    --paper:#fff8f4;
+    --card:#ffffff;
+    --line:#ffe1e6;
+    --orange:#ff8a4c;
+    --orange-d:#ef6b2a;
+    --pink:#ff7fa8;
+    --pink-d:#e8558a;
+    --plum:#b8558a;
+    --gold:#f0b429;
+    --ink:#4a2b38;
+    --body:#6b4a56;
+    --mute:#a0808c;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--body);
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,system-ui,sans-serif;
+    font-size:18px; line-height:2.05; letter-spacing:.03em; font-weight:500;
+  }
+  img,iframe,video{max-width:100%}
+  .wrap{max-width:680px; margin:0 auto; padding:0 22px}
+  h1,h2,h3{color:var(--ink); line-height:1.6; font-weight:700}
+  p{margin:0 0 1.25em}
+  section{padding:54px 0}
+  a{color:var(--pink-d)}
+  strong{color:var(--orange-d); font-weight:700}
+
+  /* ---------- 背景のふわふわ ---------- */
+  .bubbles{position:absolute; inset:0; overflow:hidden; pointer-events:none}
+  .bubbles i{position:absolute; border-radius:50%; opacity:.5;
+             background:radial-gradient(circle at 32% 30%, #fff, rgba(255,255,255,0) 62%), var(--b,#ffd2c2)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative; overflow:hidden; padding:36px 0 44px;
+    background:
+      radial-gradient(760px 380px at 8% -8%, #ffe6d2 0%, rgba(255,230,210,0) 62%),
+      radial-gradient(700px 380px at 100% 4%, #ffdbe8 0%, rgba(255,219,232,0) 60%),
+      linear-gradient(166deg,#fff0e4 0%, #fff5ee 44%, #ffe6ef 100%);
+  }
+  .hero .wrap{position:relative; z-index:2}
+  .eyebrow{display:inline-block; background:#fff; color:var(--pink-d);
+    font-size:.94rem; font-weight:800; letter-spacing:.03em;
+    padding:9px 20px; border-radius:999px; margin:0 0 20px;
+    box-shadow:0 3px 14px rgba(232,85,138,.16)}
+  .hero h1{font-size:2.2rem; margin:0 0 18px; line-height:1.5}
+  .hero h1 em{font-style:normal;
+    background:linear-gradient(transparent 62%, #ffd9a8 62%);}
+  .hero .lead{font-size:1.06rem; margin:0 0 24px}
+  .heroimg{border-radius:22px; overflow:hidden; margin:24px 0 0;
+    box-shadow:0 14px 38px rgba(210,120,140,.22)}
+  .heroimg img{display:block; width:100%}
+  .hbadges{display:flex; gap:9px; flex-wrap:wrap; margin:22px 0 0}
+  .hbadge{background:#fff; border:2px solid var(--line); color:var(--plum);
+    border-radius:999px; padding:7px 16px; font-size:.94rem; font-weight:700}
+
+  /* ---------- 動画 ---------- */
+  .videobox{background:linear-gradient(180deg,#fff3ea,#ffeaf1)}
+  .ratio{position:relative; width:100%; padding-top:56.25%;
+    background:#f6e2e8; border-radius:20px; overflow:hidden;
+    box-shadow:0 12px 34px rgba(210,130,150,.22)}
+  .ratio iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+
+  /* ---------- 見出し ---------- */
+  .kicker{color:var(--orange-d); font-size:.82rem; letter-spacing:.22em;
+    text-align:center; margin:0 0 8px; font-weight:800}
+  h2.sec{font-size:1.6rem; margin:0 0 26px; text-align:center; line-height:1.55}
+  h2.sec .mark{background:linear-gradient(transparent 60%, #ffd9e4 60%)}
+
+  /* ---------- カード ---------- */
+  .card{background:var(--card); border-radius:22px; padding:26px 24px; margin:0 0 16px;
+    box-shadow:0 6px 22px rgba(220,150,170,.14)}
+  .card h3{margin:0 0 12px; font-size:1.14rem; color:var(--pink-d)}
+  .card p:last-child{margin-bottom:0}
+
+  .voice{display:grid; gap:12px; margin:0}
+  .voice div{background:#fff; border-radius:999px; padding:14px 24px;
+    box-shadow:0 4px 16px rgba(220,150,170,.14); font-weight:700; color:var(--ink)}
+
+  /* ---------- 開催概要 ---------- */
+  .info{background:#fff; border-radius:24px; overflow:hidden;
+    box-shadow:0 8px 28px rgba(220,150,170,.16)}
+  .info .row{display:flex; gap:0; border-bottom:1px solid #ffeef2}
+  .info .row:last-child{border-bottom:0}
+  .info dt{flex:0 0 118px; background:#fff5f8; color:var(--pink-d); white-space:nowrap;
+    font-weight:800; font-size:.9rem; padding:16px 12px; margin:0; line-height:1.7}
+  .info dd{flex:1; margin:0; padding:16px 18px; line-height:1.85}
+  .info dd .big{font-size:1.2rem; font-weight:800; color:var(--ink)}
+  .info dd .note{font-size:.88rem; color:var(--mute); display:block; margin-top:4px}
+
+  /* ---------- 3時間の流れ ---------- */
+  .learn{display:grid; gap:12px; margin:0 0 24px}
+  .learn li{list-style:none; background:#fff; border-radius:16px; padding:15px 20px;
+    box-shadow:0 4px 16px rgba(220,150,170,.13); font-weight:700; color:var(--ink)}
+  .learn li span{color:var(--orange); margin-right:8px}
+  .four{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:0}
+  .four div{border-radius:16px; padding:18px 4px; text-align:center;
+    color:#fff; font-weight:800; font-size:1.02rem;
+    box-shadow:0 6px 18px rgba(255,140,110,.28)}
+  .four div:nth-child(1){background:linear-gradient(160deg,#ffb07c,#ff8a4c)}
+  .four div:nth-child(2){background:linear-gradient(160deg,#ffa0a8,#ff7f90)}
+  .four div:nth-child(3){background:linear-gradient(160deg,#ff9ec4,#f277a8)}
+  .four div:nth-child(4){background:linear-gradient(160deg,#f0b0e0,#d97fc4)}
+
+  /* ---------- 持ち物 ---------- */
+  .bring li{list-style:none; background:#fff; border-radius:16px; padding:16px 20px;
+    margin:0 0 11px; box-shadow:0 4px 16px rgba(220,150,170,.13)}
+  .bring li b{display:block; color:var(--pink-d); margin-bottom:2px}
+  .bring li span{font-size:.95rem}
+
+  /* ---------- 会場ギャラリー ---------- */
+  .gal{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+  .gal figure{margin:0; border-radius:18px; overflow:hidden; line-height:0;
+    box-shadow:0 6px 20px rgba(210,140,160,.20)}
+  .gal figure.wide{grid-column:1 / -1}
+  .gal img{display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:4/3}
+  .gal figure.tall img{aspect-ratio:3/4}
+
+  /* ---------- 舞 ---------- */
+  .maibox{max-width:380px; margin:0 auto; border-radius:22px; overflow:hidden;
+    box-shadow:0 14px 36px rgba(210,120,150,.26); background:#000; line-height:0}
+  .maibox video{display:block; width:100%; height:auto}
+
+  /* ---------- プロフィール ---------- */
+  .prof{background:#fff; border-radius:24px; padding:0 0 26px; overflow:hidden;
+    box-shadow:0 8px 28px rgba(220,150,170,.16)}
+  .prof img{display:block; width:100%}
+  .prof .body{padding:24px 24px 0}
+  .prof .name{font-size:1.3rem; color:var(--ink); font-weight:700; margin:0 0 4px}
+  .prof .free{font-size:1.02rem; color:var(--plum); font-weight:700; line-height:1.9; margin:0 0 18px}
+  .tribe{display:grid; gap:10px; margin:22px 0 0}
+  .tribe div{background:linear-gradient(160deg,#fff3e8,#ffe9f1); border-radius:16px;
+    padding:14px 20px; font-weight:800; color:var(--ink); text-align:center}
+
+  /* ---------- 引用 ---------- */
+  .quote{background:linear-gradient(160deg,#fff2e6,#ffe7f0); border-radius:24px;
+    padding:30px 26px; text-align:center; font-size:1.16rem; font-weight:700;
+    color:var(--ink); line-height:1.95}
+
+  /* ---------- CTA ---------- */
+  .cta{background:linear-gradient(160deg,#ff9a5a 0%, #ff7f9e 55%, #f472b6 100%);
+    color:#fff; padding:56px 0; text-align:center; position:relative; overflow:hidden}
+  .cta .wrap{position:relative; z-index:2}
+  .cta h2{color:#fff; font-size:1.66rem; margin:0 0 12px}
+  .cta p{color:#fff; opacity:.97}
+  .cta .limit{display:inline-block; background:rgba(255,255,255,.22); border-radius:999px;
+    padding:7px 20px; font-weight:800; font-size:.96rem; margin:0 0 20px}
+  .btn{display:block; background:#fff; color:var(--pink-d) !important; text-decoration:none;
+    font-weight:800; font-size:1.14rem; padding:20px 20px; border-radius:999px;
+    box-shadow:0 10px 28px rgba(150,50,90,.28); margin:8px 0 0}
+  .btn small{display:block; font-size:.82rem; font-weight:700; color:var(--mute); margin-top:4px}
+
+  footer{padding:32px 0 60px; text-align:center; color:var(--mute); font-size:.9rem}
+  .sticky{position:sticky; bottom:0; z-index:20; background:rgba(255,255,255,.94);
+    border-top:1px solid var(--line); padding:11px 0; backdrop-filter:blur(6px)}
+  .sticky a{display:block; max-width:560px; margin:0 auto; text-align:center;
+    background:linear-gradient(90deg,#ff8a4c,#f472b6); color:#fff !important; text-decoration:none;
+    font-weight:800; padding:14px; border-radius:999px}
+  @media(max-width:520px){
+    .hero h1{font-size:1.8rem}
+    .four{grid-template-columns:repeat(2,1fr)}
+    .info dt{flex-basis:100px; font-size:.8rem; padding:14px 9px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="bubbles">
+    <i style="--b:#ffd0bd; width:120px; height:120px; left:-30px; top:60px"></i>
+    <i style="--b:#ffd3e2; width:80px;  height:80px;  right:8%;  top:24px"></i>
+    <i style="--b:#ffe6c9; width:54px;  height:54px;  right:22%; top:180px"></i>
+    <i style="--b:#ffd9ea; width:38px;  height:38px;  left:16%;  top:250px"></i>
+  </div>
+  <div class="wrap">
+    <span class="eyebrow">🥣✨ ミミトライブ募集します♡</span>
+    <h1>クリスタルボウル<br><em>演奏お仲間</em>に<br>なりませんか</h1>
+    <p class="lead">
+      このたび、’’ひそか’’に<br>
+      <strong>100人ボウル✨</strong> を目指して（笑）<br>
+      クリスタルボウルのお仲間を募集することにしました💖
+    </p>
+    <div class="hbadges">
+      <span class="hbadge">経験ゼロでOK</span>
+      <span class="hbadge">年齢不問♡</span>
+      <span class="hbadge">定員5名</span>
+      <span class="hbadge">あさごはん付き☀️</span>
+    </div>
+    <div class="heroimg"><img src="img/hero.jpg" alt="キャンドルの灯りとクリスタルボウルを奏でるミミ"></div>
+  </div>
+</div>
+
+<!-- ============ 動画 ============ -->
+<section class="videobox">
+  <div class="wrap">
+    <p class="kicker">MOVIE</p>
+    <h2 class="sec">まずは、<span class="mark">音を聴いてみてください</span></h2>
+    <div class="ratio">
+      <iframe src="https://www.youtube-nocookie.com/embed/4ZRyjnQaXV0?rel=0"
+              title="一緒に、奏でませんか。｜クリスタルボウルの演奏仲間を募集しています"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+    <p style="margin-top:22px; text-align:center; font-size:.96rem; color:var(--mute)">
+      シリカクリエーションの工場見学で演奏させていただいたときの映像です✨
+    </p>
+  </div>
+</section>
+
+<!-- ============ こんな方へ ============ -->
+<section>
+  <div class="wrap">
+    <p class="kicker">FOR YOU</p>
+    <h2 class="sec">こんな感じで<span class="mark">ぜんぜんだいじょうぶ</span>です✨</h2>
+    <div class="voice">
+      <div>「なんか気になる」</div>
+      <div>「音を出してみたい」</div>
+      <div>「クリスタルボウルってなに？」</div>
+    </div>
+    <div class="card" style="margin-top:24px">
+      <h3>経験はもちろんゼロで大丈夫。年齢も問いません♡</h3>
+      <p style="margin:0">むずかしいことは、なにもありません。<br>
+      「やってみたいな」と思った、その気持ちだけ持ってきてください💖</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 開催概要 ============ -->
+<section style="background:linear-gradient(180deg,#fff5ee,#ffeef4)">
+  <div class="wrap">
+    <p class="kicker">FIRST EVENT</p>
+    <h2 class="sec">第1回・<span class="mark">クリスタルボウル体験会</span></h2>
+    <div class="info">
+      <div class="row"><dt>📅 日にち</dt><dd><span class="big">9月21日（月・敬老の日）</span></dd></div>
+      <div class="row"><dt>⏰ 時間</dt><dd><span class="big">朝9:00〜 約3時間</span></dd></div>
+      <div class="row"><dt>📍 場所</dt><dd><span class="big">ミミ リバーハウス</span>
+        <span class="note">愛知県新城市　目の前、川です🏞</span></dd></div>
+      <div class="row"><dt>🥣 体験料金</dt><dd><span class="big">8,000円</span>
+        <span class="note">当日現金にてお願いします／レッスンチケットでの参加もOK✨</span></dd></div>
+      <div class="row"><dt>☀️ お食事</dt><dd>あさごはん付き♡
+        <span class="note">ドイツ人旦那さまがたぶん作ってくれます（笑）</span></dd></div>
+      <div class="row"><dt>👥 定員</dt><dd><span class="big">5名（先着）</span>
+        <span class="note">少人数で、じっくり、深く、でも楽しく♡</span></dd></div>
+    </div>
+    <p style="margin:24px 0 0; text-align:center">
+      まずは試験的に、やってみましょう✨<br>
+      みなさまとの交流もしながら、クリスタルボウルを囲んで<strong>共振・共鳴</strong>いたしましょう🥣✨
+    </p>
+  </div>
+</section>
+
+<!-- ============ 3時間 ============ -->
+<section>
+  <div class="wrap">
+    <p class="kicker">3 HOURS</p>
+    <h2 class="sec">3時間で、<span class="mark">こんなことをします</span></h2>
+    <ul class="learn" style="padding:0">
+      <li><span>🥣</span>クリスタルボウルの音の出しかた</li>
+      <li><span>🥣</span>鳴らすときの心構え</li>
+      <li><span>🥣</span>クリスタルボウルを奏でる目的</li>
+      <li><span>🥣</span>音・波動との関係</li>
+    </ul>
+    <p style="text-align:center">脳で考えず、<br>できるだけシンプルに、わかりやすく。</p>
+    <div class="four">
+      <div>知る</div><div>鳴らす</div><div>感じる</div><div>遊ぶ♡</div>
+    </div>
+    <p style="margin:20px 0 0; text-align:center; font-size:.98rem">
+      この4つを、たっぷり体験してもらえたらと思っています✨
+    </p>
+  </div>
+</section>
+
+<!-- ============ 会場 ============ -->
+<section style="background:linear-gradient(180deg,#fff5ee,#ffeef4)">
+  <div class="wrap">
+    <p class="kicker">THE PLACE</p>
+    <h2 class="sec">会場は、<span class="mark">こんなところです</span>🌿</h2>
+    <p style="text-align:center; margin-bottom:26px">
+      奥三河・新城の川辺。<br>
+      木のデッキに座って、木もれ日の下で音を鳴らします✨
+    </p>
+    <div class="gal">
+      <figure class="wide"><img src="img/basho/v1.jpg" alt="木々に囲まれたウッドデッキ" loading="lazy"></figure>
+      <figure><img src="img/basho/v2.jpg" alt="デッキの上のテーブル" loading="lazy"></figure>
+      <figure><img src="img/basho/v3.jpg" alt="目の前の川" loading="lazy"></figure>
+      <figure class="wide"><img src="img/basho/v4.jpg" alt="浅瀬の石" loading="lazy"></figure>
+      <figure class="tall"><img src="img/basho/v5.jpg" alt="デッキでの食事" loading="lazy"></figure>
+      <figure class="tall"><img src="img/basho/v6.jpg" alt="川で遊ぶ" loading="lazy"></figure>
+    </div>
+    <p style="margin:26px 0 0; text-align:center; font-weight:700; color:var(--ink)">
+      目の前、川です🏞<br>
+      気持ちよかったら、入っちゃいましょう（笑）
+    </p>
+  </div>
+</section>
+
+<!-- ============ 持ち物 ============ -->
+<section>
+  <div class="wrap">
+    <p class="kicker">BRING</p>
+    <h2 class="sec">🌿 持ち物♡</h2>
+    <ul class="bring" style="padding:0; margin:0">
+      <li><b>🥣 マイクリスタルボウル</b><span>お持ちの方はぜひご持参ください✨</span></li>
+      <li><b>👕 動きやすい格好で♡</b><span>少しボディーワークもやりましょう。音を鳴らす前に、まず自分という楽器から整えます😆</span></li>
+      <li><b>💧 水分</b><span>お忘れなく。もちろんシリカ入り推しです</span></li>
+      <li><b>💎 お守り・石・アクセサリーなど</b><span>「これ、ちょっと浄化したいです♡」というものがあればぜひどうぞ✨ 音と自然の中でピカピカにしましょう。</span></li>
+      <li><b>👙 水着（そして……）</b><span>川で遊びたい方はどうぞ（笑）　ちなみにミミはシーズン問わず、みそぎしております😂🙏✨</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 舞 ============ -->
+<section style="background:linear-gradient(180deg,#fff5ee,#ffeef4)">
+  <div class="wrap">
+    <p class="kicker">DANCE</p>
+    <h2 class="sec">そして、<span class="mark">舞うこともあります♡</span></h2>
+    <p style="text-align:center; margin-bottom:24px">
+      音を鳴らすだけじゃなく、<br>からだごと遊んじゃいます✨
+    </p>
+    <div class="maibox">
+      <video controls playsinline preload="none" poster="img/mai_poster.jpg">
+        <source src="img/mai.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p style="margin:22px 0 0; text-align:center; font-size:.96rem; color:var(--mute)">
+      ↑ タップすると再生されます
+    </p>
+  </div>
+</section>
+
+<!-- ============ プロフィール ============ -->
+<section>
+  <div class="wrap">
+    <p class="kicker">WHO IS MIMI</p>
+    <h2 class="sec">音とからだと自然で<span class="mark">あそぶ人。</span></h2>
+    <div class="prof">
+      <img src="img/mimi.jpg" alt="MIMI（ミミ）">
+      <div class="body">
+        <p class="name">MIMI｜ミミ</p>
+        <p class="free">音をならしたり<br>踊ったり<br>歌ったり<br>笑ったり。<br><br>ときどき川に飛びこんだり（笑）</p>
+        <p>子どものころから音楽とダンスが大好きで、これまでダンス、ボイスワーク、からだづくり、イベントや空間づくりなど、「みんなが自由になること」をいろいろやってきました。</p>
+        <p>そして今、夢中なのが<strong>クリスタルボウル。</strong></p>
+        <p>上手に演奏することよりも、<br>音を感じること。<br>からだで響くこと。<br>みんなでひとつの音になること。<br><br>そんな時間が大好きです。</p>
+        <p style="margin-bottom:0">奥三河の川辺にある<strong>みみリバーハウス</strong>を基地にしながら、音を鳴らしたり、からだを動かしたり、自然の中で遊んだり、ときどき禊ぎしたり（笑）<br>そんな、ちょっと夢見ごこちなファンタジーで自由な仲間たちを増やしていきたいと思っています。</p>
+      </div>
+    </div>
+    <div class="tribe">
+      <div>音でつながる。</div>
+      <div>あそびでつながる。</div>
+      <div>響きでつながる。</div>
+    </div>
+    <p style="margin:24px 0 0; text-align:center; font-weight:700; color:var(--ink)">
+      経験、年齢、音楽歴、ぜんぶ関係なし。<br>
+      「なんか楽しそう」　そのくらいで大歓迎♡
+    </p>
+  </div>
+</section>
+
+<!-- ============ 想い ============ -->
+<section style="background:linear-gradient(180deg,#fff5ee,#ffeef4)">
+  <div class="wrap">
+    <div class="quote">
+      そしていつか<br>
+      <span style="font-size:1.34rem; color:var(--pink-d)">100人で鳴らしたい💖</span><br>
+      うん　たぶんできる！
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<div class="cta" id="join">
+  <div class="bubbles">
+    <i style="--b:#ffffff; width:150px; height:150px; left:-40px; top:-30px; opacity:.16"></i>
+    <i style="--b:#ffffff; width:90px;  height:90px;  right:6%;  bottom:10px; opacity:.14"></i>
+  </div>
+  <div class="wrap">
+    <h2>ミミ族、<br>いや、ミミトライブに<br>入りたい方💖</h2>
+    <span class="limit">先着5名です✨</span>
+    <p>参加したい方は<br>LINEで「参加しまーす🙋‍♀️」と送ってください♡</p>
+    <a class="btn" href="https://line.me/ti/p/D7KZkDZsCq" target="_blank" rel="noopener">
+      LINEで「参加しまーす🙋‍♀️」
+      <small>タップするとミミのLINEが開きます</small>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    クリスタルボウル奏者 mimi<br>
+    ミミ リバーハウス（愛知県新城市）
+  </div>
+</footer>
+
+<div class="sticky">
+  <div class="wrap" style="padding:0 18px">
+    <a href="https://line.me/ti/p/D7KZkDZsCq" target="_blank" rel="noopener">LINEで参加を伝える🙋‍♀️</a>
+  </div>
+</div>
+
+</body>
+</html>
